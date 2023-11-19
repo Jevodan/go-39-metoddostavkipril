@@ -20,7 +20,7 @@ test:
   script:
     make test
   after_script:
-    - echo "Build finished, whether successful or not"
+     'if [ "$CI_JOB_STATUS" == "success" ]; then echo "Done!"; fi'
 
 lint:
   stage: test
