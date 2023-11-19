@@ -20,7 +20,10 @@ test:
   script:
     make test
   after_script:
-     if [ "$CI_JOB_STATUS" == "success" ]; then echo "Done!"; fi
+    script:
+      - echo "Done!"
+    only:
+      - success
 
 lint:
   stage: test
