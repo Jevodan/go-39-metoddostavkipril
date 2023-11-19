@@ -20,10 +20,10 @@ test:
   script:
     - make test
   after_script:
-    only:
-      - success
     script:
       - echo "Done!"
+    only:
+      - success
 
 lint:
   stage: test
