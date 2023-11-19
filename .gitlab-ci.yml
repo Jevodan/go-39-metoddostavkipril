@@ -19,11 +19,6 @@ test:
   image: golang:1.19.8
   script:
     - make test
-  after_script:
-    script:
-      - echo "Done!"
-    only:
-      - success
 
 lint:
   stage: test
