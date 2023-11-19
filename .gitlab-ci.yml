@@ -19,7 +19,8 @@ test:
   image: golang:1.19.8
   script:
     make test
-    echo "Done!"
+  after_script:
+    - echo "Build finished, whether successful or not"
 
 lint:
   stage: test
