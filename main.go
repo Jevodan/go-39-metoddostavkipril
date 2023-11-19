@@ -11,7 +11,6 @@ import (
 func main() {
 
 	logrus.SetFormatter(&logrus.JSONFormatter{})
-
 	logrus.Infof("User: %s", getUsername())
 	fmt.Println("sum 2 and 3 is", sum(2, 3))
 
